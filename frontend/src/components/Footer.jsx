@@ -100,8 +100,8 @@ const Footer = () => {
               </div>
 
               <div>
-                <h2 className={footerStyles.companyName}>CuraDesk</h2>
-                <p className={footerStyles.companyTagline}>Healthcare</p>
+                <h2 className={footerStyles.companyName}>MediFlow</h2>
+                <p className={footerStyles.companyTagline}>Healthcare, connected.</p>
               </div>
             </div>
 

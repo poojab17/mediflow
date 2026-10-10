@@ -500,7 +500,7 @@ const ChatWindow = ({ onClose }) => {
         <div>
 
           <p className="font-bold text-lg text-gray-800">
-            CuraDesk AI
+            MediFlow AI
           </p>
 
           <p className="text-xs text-gray-500">

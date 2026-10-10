@@ -240,7 +240,7 @@ const CuraDeskAI = () => {
 
                 <div className="p-5 border-b border-slate-800">
                     <h2 className="text-2xl font-bold text-cyan-400">
-                        CuraDesk AI
+                        MediFlow AI
                     </h2>
 
                     <p className="text-sm text-slate-400 mt-1">
@@ -297,7 +297,7 @@ const CuraDeskAI = () => {
 
                     <div>
                         <h1 className="text-3xl font-bold text-slate-800">
-                            CuraDesk AI
+                            MediFlow AI
                         </h1>
 
                         <p className="text-slate-500">
@@ -375,7 +375,7 @@ const CuraDeskAI = () => {
                             <div className="text-center mt-20">
 
                                 <h2 className="text-5xl font-bold text-slate-800">
-                                    🧠 CuraDesk AI
+                                    🧠 MediFlow AI
                                 </h2>
 
                                 <p className="text-slate-500 mt-4 text-lg">
@@ -478,7 +478,7 @@ const CuraDeskAI = () => {
 
                         <input
                             type="text"
-                            placeholder="Ask CuraDesk AI..."
+                            placeholder="Ask MediFlow AI..."
                             value={input}
                             onChange={(e) =>
                                 setInput(e.target.value)

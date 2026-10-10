@@ -39,7 +39,7 @@ const CuraDeskWorkspace = () => {
                 <div className="h-16 border-b bg-white flex items-center px-6">
 
                     <h2 className="font-semibold text-slate-700">
-                        CuraDesk AI Workspace
+                        MediFlow AI Workspace
                     </h2>
 
                 </div>

@@ -37,7 +37,7 @@ const AIComposer = ({
                         }
 
                     }}
-                    placeholder="Ask CuraDesk AI..."
+                    placeholder="Ask MediFlow AI..."
                     className="
                     flex-1
                     border

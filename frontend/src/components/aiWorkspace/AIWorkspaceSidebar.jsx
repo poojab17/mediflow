@@ -5,7 +5,7 @@ const AIWorkspaceSidebar = () => {
             <div className="p-5 border-b border-slate-800">
 
                 <h1 className="text-2xl font-bold text-cyan-400">
-                    CuraDesk AI
+                    MediFlow AI
                 </h1>
 
                 <p className="text-sm text-slate-400 mt-1">

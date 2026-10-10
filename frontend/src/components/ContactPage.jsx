@@ -316,7 +316,7 @@ export default function ContactPage() {
                             <Phone size={16} /> 7289086655
                         </p>
                         <p className={contactPageStyles.infoItem}>
-                            <Mail size={16} /> CuraDesk@gmail.com
+                            <Mail size={16} /> support@mediflow.com
                         </p>
                     </div>
 

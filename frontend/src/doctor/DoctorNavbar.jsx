@@ -42,9 +42,9 @@ export default function DoctorNavbar() {
             />
           </div>
           <div className={navbarStylesDr.brandTextContainer}>
-            <div className={navbarStylesDr.brandTitle}>CuraDesk</div>
+            <div className={navbarStylesDr.brandTitle}>MediFlow</div>
             <div className={navbarStylesDr.brandSubtitle}>
-              HealthCare Solutions
+              Healthcare, connected.
             </div>
           </div>
         </div>
