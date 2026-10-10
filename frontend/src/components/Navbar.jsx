@@ -45,6 +45,7 @@ const Navbar = () => {
     { label: "Doctors", href: "/doctors" },
     { label: "Services", href: "/services" },
     { label: "Appointments", href: "/appointments" },
+    { label: "My Health", href: "/timeline" },
     { label: "Contact", href: "/contact" },
   ];
 

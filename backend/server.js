@@ -14,6 +14,7 @@ import newsletterRoutes from "./routes/newsletterRoutes.js";
 import chatbotRouter from "./routes/chatbotRouter.js";
 import testRoutes from "./routes/testRoutes.js";
 import reportRoutes from "./routes/reportRoutes.js";
+import patientRouter from "./routes/patientRouter.js";
 
 
 
@@ -71,6 +72,7 @@ app.use("/api/chatbot", chatbotRouter);
 app.use("/api/test", testRoutes);
 app.use("/api/reports", reportRoutes);
 app.use("/api/rag", ragRoutes);
+app.use("/api/patient", patientRouter);
 
 
 app.get('/', (req, res) => {

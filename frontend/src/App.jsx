@@ -14,6 +14,8 @@ import List from "./pages/List";
 import EditProfile from "./pages/EditProfile";
 import Appointments from "./pages/Appointments";
 import CuraDeskWorkspace from "./pages/CuraDeskWorkspace";
+import HealthTimeline from "./pages/HealthTimeline";
+import ReportComparison from "./pages/ReportComparison";
 
 
 import { ToastContainer } from "react-toastify";
@@ -104,6 +106,8 @@ const App = () => {
 
           {/* User */}
           <Route path="/appointments" element={<Appointments />} />
+          <Route path="/timeline" element={<HealthTimeline />} />
+          <Route path="/reports/comparison" element={<ReportComparison />} />
           
 
           {/* Public Pages */}

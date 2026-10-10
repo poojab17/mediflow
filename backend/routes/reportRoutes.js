@@ -24,6 +24,14 @@ import { processReportAI, ocrReportAI } from "../services/reportAiService.js";
 
 import { collection } from "../services/chromaService.js";
 
+import { extractLabResults, extractReportDates } from "../services/labExtractionService.js";
+
+import {
+  getReportHistory,
+  getReportResults,
+  postCompareReports,
+} from "../controllers/reportInsightsController.js";
+
 const router = express.Router();
 
 const upload = multer({
@@ -468,11 +476,31 @@ router.post(
             // SAVE REPORT METADATA
             // =========================
 
+            // Deterministic lab-result extraction (best-effort, non-breaking).
+            // Never blocks a successful upload if extraction fails.
+            let labResults = [];
+            let labMethod = "none";
+            const dates = extractReportDates(cleanedText);
+
+            try {
+              const extracted = extractLabResults(cleanedText);
+              labResults = extracted.results;
+              labMethod = extracted.method;
+            } catch (extractErr) {
+              console.log(
+                "LAB EXTRACTION SKIPPED:",
+                extractErr.message
+              );
+            }
+
             await Report.create({
 
               userId,
 
               reportName:
+                req.file.originalname,
+
+              fileOriginalName:
                 req.file.originalname,
 
               fileHash,
@@ -482,6 +510,25 @@ router.post(
 
               reportType:
                 "medical-report",
+
+              extractedText:
+                cleanedText,
+
+              pages:
+                cleanedPages,
+
+              reportDate:
+                dates.reportDate,
+
+              collectionDate:
+                dates.collectionDate,
+
+              labResults,
+
+              labMethod,
+
+              labExtractedAt:
+                labMethod === "none" ? null : new Date(),
 
             });
 
@@ -562,6 +609,26 @@ router.post(
       });
     }
   }
+);
+
+// ---------------- report insights (patient-scoped) ----------------
+
+router.get(
+  "/history",
+  requireAuth(),
+  getReportHistory
+);
+
+router.post(
+  "/compare",
+  requireAuth(),
+  postCompareReports
+);
+
+router.get(
+  "/:id/results",
+  requireAuth(),
+  getReportResults
 );
 
 export default router;

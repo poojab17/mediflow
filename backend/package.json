@@ -7,7 +7,9 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "node --test tests/*.test.js",
+    "seed:services": "node scripts/seedServices.js"
   },
   "dependencies": {
     "@clerk/clerk-sdk-node": "^4.13.23",
